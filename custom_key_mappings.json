@@ -1,0 +1,105 @@
+{
+  "title": "Ben's Custom Key Mappings",
+  "maintainers": ["bengibb"],
+  "rules": [
+    {
+      "description": "Switch left_command and control on Logi MX Keys Mini",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "left_command"
+          },
+          "to": [
+            {
+              "key_code": "left_control"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "device_if",
+              "identifiers": [
+                {
+                  "vendor_id": 1133,
+                  "product_id": 45929
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "left_control"
+          },
+          "to": [
+            {
+              "key_code": "left_command"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "device_if",
+              "identifiers": [
+                {
+                  "vendor_id": 1133,
+                  "product_id": 45929
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "app switcher is now ctrl-tab",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "tab",
+            "modifiers": {
+              "mandatory": ["left_control"]
+            }
+          },
+          "to": [
+            {
+              "key_code": "tab",
+              "modifiers": ["left_command"]
+            }
+          ],
+          "conditions": [
+            {
+              "type": "device_if",
+              "identifiers": [
+                {
+                  "vendor_id": 1133,
+                  "product_id": 45929
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "cmd + caps lock is enter",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "delete_or_backspace",
+            "modifiers": {
+              "mandatory": ["left_control"]
+            }
+          },
+          "to": [
+            {
+              "key_code": "return_or_enter"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
