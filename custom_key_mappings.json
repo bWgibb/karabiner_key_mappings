@@ -100,6 +100,43 @@
           ]
         }
       ]
+    },
+    {
+      "description": "cmd + arrow jumps a word",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "left_arrow",
+            "modifiers": {
+              "mandatory": ["left_command"],
+              "optional": ["left_shift"]
+            }
+          },
+          "to": [
+            {
+              "key_code": "left_arrow",
+              "modifiers": ["left_option"]
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "right_arrow",
+            "modifiers": {
+              "mandatory": ["left_command"],
+              "optional": ["left_shift"]
+            }
+          },
+          "to": [
+            {
+              "key_code": "right_arrow",
+              "modifiers": ["left_option"]
+            }
+          ]
+        }
+      ]
     }
   ]
 }
