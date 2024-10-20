@@ -52,6 +52,50 @@
       ]
     },
     {
+      "description": "Switch left_command, left_control, and fn on MacBook Pro",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "left_command"
+          },
+          "to": [
+            {
+              "key_code": "left_control"
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "left_control"
+          },
+          "to": [
+            {
+              "key_code": "fn"
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "fn"
+          },
+          "to": [
+            {
+              "key_code": "left_command"
+            }
+          ]
+        }
+      ],
+      "conditions": [
+        {
+          "type": "device_if",
+          "identifiers": [{ "device_id": 4294969898 }]
+        }
+      ]
+    },
+    {
       "description": "app switcher is now ctrl-tab",
       "manipulators": [
         {
@@ -66,17 +110,6 @@
             {
               "key_code": "tab",
               "modifiers": ["left_command"]
-            }
-          ],
-          "conditions": [
-            {
-              "type": "device_if",
-              "identifiers": [
-                {
-                  "vendor_id": 1133,
-                  "product_id": 45929
-                }
-              ]
             }
           ]
         }
