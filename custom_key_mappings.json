@@ -170,6 +170,30 @@
           ]
         }
       ]
+    },
+    {
+      "description": "Press Option alone to open Launchpad",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "left_option",
+            "modifiers": {
+              "optional": ["any"]
+            }
+          },
+          "to_if_alone": [
+            {
+              "shell_command": "open -a Launchpad"
+            }
+          ],
+          "to": [
+            {
+              "key_code": "left_option"
+            }
+          ]
+        }
+      ]
     }
   ]
 }
